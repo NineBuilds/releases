@@ -6,7 +6,7 @@ echo "Build started for ${device}"
 if [ "${jenkins}" == "true" ]; then
     telegram -M "Build ${BUILD_DISPLAY_NAME} started for ${device}: [See Progress](${BUILD_URL}console)"
 else
-    telegram -M "Build started for ${device}"
+    telegram -M "Will the build for ${device} be successful?"
 fi
 source build/envsetup.sh
 source "${my_dir}/config.sh"
@@ -98,14 +98,14 @@ Date: $(env TZ="${timezone}" date)" "${incremental_zip_path}"
 Date: $(env TZ="${timezone}" date)" "${img_path}"
         else
             echo "Build failed in $((BUILD_DIFF / 60)) minute(s) and $((BUILD_DIFF % 60)) seconds"
-            telegram -N -M "Build failed in $((BUILD_DIFF / 60)) minute(s) and $((BUILD_DIFF % 60)) seconds"
+            telegram -N -M "Holy sh- I've just wasted $((BUILD_DIFF / 60)) minute(s) and $((BUILD_DIFF % 60)) for nothing"
             curl --data parse_mode=HTML --data chat_id=$TELEGRAM_CHAT --data sticker=CAADBQADGgEAAixuhBPbSa3YLUZ8DBYE --request POST https://api.telegram.org/bot$TELEGRAM_TOKEN/sendSticker
             exit 1
         fi
     fi
     echo "Uploaded"
 
-    telegram -M "Build completed successfully in $((BUILD_DIFF / 60)) minute(s) and $((BUILD_DIFF % 60)) seconds
+    telegram -M "OMG GUYS LETS DOWNLOAD THE LATEST VERSION I'VE JUST DID IN $((BUILD_DIFF / 60)) minute(s) and $((BUILD_DIFF % 60)) SECONDS AAAA
 
 Download: ["${tag}"]("https://github.com/${release_repo}/releases/tag/${tag}")"
 

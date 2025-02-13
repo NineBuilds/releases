@@ -3,7 +3,7 @@ echo "Sync started for ${manifest_url}/tree/${branch}"
 if [ "${jenkins}" == "true" ]; then
     telegram -M "Sync started for [${ROM} ${ROM_VERSION}](${manifest_url}/tree/${branch}): [See Progress](${BUILD_URL}console)"
 else
-    telegram -M "Sync started for [${ROM} ${ROM_VERSION}](${manifest_url}/tree/${branch})"
+    telegram -M "OMG someone has started a Sync [${ROM} ${ROM_VERSION}](${manifest_url}/tree/${branch}) o.o"
 fi
 SYNC_START=$(date +"%s")
 rm -rf .repo/local_manifests
