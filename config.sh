@@ -1,28 +1,24 @@
 #!/bin/bash
 
-export GITHUB_USER=""
-export GITHUB_EMAIL=""
+export device="beyond0lte"
 
-export device=""
-
-export ROM=""
-export ROM_DIR=""
-export ROM_VERSION=""
-export local_manifest_url=""
-export manifest_url=""
-export rom_vendor_name=""
-export branch=""
+export ROM="Derpfest"
+export ROM_DIR="../derpfest"
+export ROM_VERSION="15"
+export local_manifest_url="https://raw.githubusercontent.com/NineBuilds/manifests/refs/heads/master/derpfest/15/beyond0lte.xml"
+export manifest_url="https://github.com/DerpFest-AOSP/manifest"
+export rom_vendor_name="derp"
+export branch="15"
 export bacon="bacon"
-export buildtype=""
-export clean=""
-export generate_incremental=""
-export upload_recovery=""
+export buildtype="userdebug"
+export generate_incremental="false"
+export upload_recovery="false"
 
-export ccache=""
-export ccache_size=""
+export ccache="1"
+export ccache_size="5G"
 
 export jenkins="false"
 
-export release_repo=""
+export release_repo="NineBuilds/releases"
 
 export timezone="UTC"
