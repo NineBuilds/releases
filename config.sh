@@ -1,28 +1,24 @@
 #!/bin/bash
 
-export GITHUB_USER=""
-export GITHUB_EMAIL=""
+export device="sanders"
 
-export device=""
-
-export ROM=""
-export ROM_DIR=""
-export ROM_VERSION=""
-export local_manifest_url=""
-export manifest_url=""
-export rom_vendor_name=""
-export branch=""
+export ROM="LineageOS"
+export ROM_DIR="../lineage/"
+export ROM_VERSION="18.1"
+export local_manifest_url="https://raw.githubusercontent.com/mthlma/manifests/refs/heads/master/lineage/18.x/msm8953-common.xml"
+export manifest_url="https://github.com/LineageOS/android"
+export rom_vendor_name="lineage"
+export branch="lineage-18.1"
 export bacon="bacon"
-export buildtype=""
-export clean=""
-export generate_incremental=""
-export upload_recovery=""
+export buildtype="userdebug"
+export generate_incremental="false"
+export upload_recovery="true"
 
-export ccache=""
-export ccache_size=""
+export ccache="1"
+export ccache_size="5G"
 
-export jenkins="false"
+export jenkins="true"
 
-export release_repo=""
+export release_repo="NineBuilds/releases"
 
 export timezone="UTC"
